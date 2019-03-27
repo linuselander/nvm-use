@@ -1,0 +1,18 @@
+{
+  "name": "nvm-use",
+  "version": "1.0.0",
+  "description": "Use nvm to switch node version based on .nvmrc",
+  "main": "index.js",
+  "bin": {
+    "nvm-use": "./cli.js"
+  },
+  "scripts": {
+    "test": "nvm-use"
+  },
+  "author": "Perlin Systems",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-confirm": "^2.0.4",
+    "shelljs": "^0.8.3"
+  }
+}
