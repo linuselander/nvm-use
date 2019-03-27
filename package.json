@@ -9,8 +9,8 @@
   "author": "Linus Elander",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/linuselander/nvm-use.git"
+    "type": "git",
+    "url": "https://github.com/linuselander/nvm-use.git"
   },
   "dependencies": {
     "prompt-confirm": "^2.0.4",
