@@ -6,11 +6,12 @@
   "bin": {
     "nvm-use": "./cli.js"
   },
-  "scripts": {
-    "test": "nvm-use"
+  "author": "Linus Elander",
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/linuselander/nvm-use.git"
   },
-  "author": "Perlin Systems",
-  "license": "ISC",
   "dependencies": {
     "prompt-confirm": "^2.0.4",
     "shelljs": "^0.8.3"

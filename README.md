@@ -1,0 +1,2 @@
+# Use .nvmrc on Windows
+
