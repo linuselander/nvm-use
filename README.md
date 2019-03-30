@@ -5,7 +5,15 @@ The Windows implementation of a Node version Manager [nvm-windows](https://githu
 
 ## nvm-use
 
-nvm-use is a small wrapper for nvm for use in npm scripts.
+nvm-use is a small wrapper for nvm for use in npm scripts.  
+
+### Requirements
+
+[nvm-windows](https://github.com/coreybutler/nvm-windows) must be installed for
+nvm-use to perform any actions. If you are running your npm script from another
+system nvm-use will simply exit with 0 and your npm script will continue.
+
+### Setup
 
 Create a .nvmrc in the project root
 ```bash
@@ -22,3 +30,4 @@ And prepend your scripts in package.json with nvm-use
   //...
 }
 ```
+
