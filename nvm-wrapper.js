@@ -1,5 +1,7 @@
 const shell = require('shelljs')
 
+const isExecutable = () => !!shell.which('nvm')
+
 const list = () => shell
   .exec('nvm list', { silent: true })
   .stdout
@@ -22,6 +24,7 @@ const nvmrc = () => {
 const has = (version) => list().includes(version)
 
 module.exports = {
+  isExecutable,
   list,
   use,
   install,
