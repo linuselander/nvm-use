@@ -38,7 +38,7 @@ const useVersion = (version, silent, onAborted) => {
 }
 
 module.exports = {
-  hasNvm: nvm.isExecutable,
+  hasNvm: nvm.isCommand,
   getRequestedVersion: nvm.nvmrc,
   useVersion
 }
