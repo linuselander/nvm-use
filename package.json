@@ -1,6 +1,6 @@
 {
   "name": "nvm-use",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Use nvm to switch node version based on .nvmrc",
   "main": "index.js",
   "bin": {
