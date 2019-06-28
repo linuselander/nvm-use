@@ -20,11 +20,11 @@ const install = (version, silent, callback) => {
   })
 }
 
-const useVersion = (version, silent, onAborted) => {
+const use = (version, silent, onAborted) => {
   if(version === process.version) return;
 
   if (!nvm.has(version)) {
-    install(version, silent, (accepted) => accepted ? useVersion(version, silent, onAborted) : onAborted())
+    install(version, silent, (accepted) => accepted ? use(version, silent, onAborted) : onAborted())
   }
   else if (silent) {
     nvm.use(version)
@@ -38,7 +38,7 @@ const useVersion = (version, silent, onAborted) => {
 }
 
 module.exports = {
-  hasNvm: nvm.isCommand,
-  getRequestedVersion: nvm.nvmrc,
-  useVersion
+  nvm: nvm.isExecutable,
+  nvmrc: { read: nvm.nvmrc },
+  use
 }

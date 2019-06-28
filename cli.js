@@ -1,9 +1,8 @@
 #!/usr/bin/env node
-const { hasNvm, useVersion, getRequestedVersion } = require('./')
+const { nvm, use, nvmrc } = require('./')
 const silent = process.argv.includes('-s') || process.argv.includes('--silent')
-const requestedVersion = getRequestedVersion()
-const currentVersion = process.version
+const requestedVersion = nvmrc.read()
 
-if(hasNvm() && requestedVersion !== null) {
-  useVersion(requestedVersion, silent, () => process.exitCode = 1)
+if(nvm && requestedVersion !== null) {
+  use(requestedVersion, silent, () => process.exitCode = 1)
 }
